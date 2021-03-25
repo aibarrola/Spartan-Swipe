@@ -1,1 +1,1 @@
-# CommunityLearn
+# Spartan Swipe
