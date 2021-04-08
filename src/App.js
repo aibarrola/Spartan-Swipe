@@ -1,14 +1,22 @@
 import './App.css';
+import Landing from '../src/components/pages/Landing/landing'
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Landing />
+          </Route>
+        </Switch>
 
-        <h1> Spartan Swipe </h1>
+      </Router>
+  
      
-      </header>
-    </div>
   );
 }
 
