@@ -1,11 +1,11 @@
-.register{
+.createProfile{
     background-color: #E6EEF6;
     height: 100vh;
     display: flex;
     justify-content: center;
 }
 
-.registerBox{
+.createProfileBox{
     background-color: white;
     width: 500px;
     align-self: center;
@@ -15,7 +15,7 @@
     padding-bottom: 3%;
 }
 
-.registerTitle{
+.createProfileTitle{
     font-size: 1.3em;
     color: #011111;
     font-weight: bold;
@@ -24,7 +24,7 @@
     padding-bottom: 0px;
 }
 
-.registerDesc{
+.createProfileDesc{
     margin-top: 5px;
     text-align: center;
     font-size: .8rem;
@@ -32,7 +32,7 @@
     font-weight: 400;
 }
 
-.registerInputContainer{
+.createProfileInputContainer{
     justify-self: center;
     align-self: center;
     width: 80%;
@@ -46,7 +46,7 @@
     
 }
 
-.signUpInput{
+.createProfileInput{
     width: 100%;
     border: 1px solid #C4C4C4;
     color: black;
@@ -55,23 +55,23 @@
     padding-left: 10px;
 }
 
-.signUpInput:focus{
+.createProfileInput:focus{
     border:1px solid #4D90CD;
     outline: #4D90CD;
 }
 
-.signUpInput::placeholder{
+.createProfileInput::placeholder{
     color: #C4C4C4;
 }
 
-.registerForm{
+.createProfileForm{
     display: flex;
     margin-top: 10px;
     justify-content: center;
     flex-direction: column;
 }
 
-.registerButton{
+.createProfileButton{
     background-color: #4D90CD;
     color: white;
     padding: 7px 20px;
@@ -83,4 +83,37 @@
     float: right;
     position: relative;
     right: -12px;
+}
+
+
+/* PROGRESS BAR */
+
+.progressText{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-size: 12px;
+    color: #E5E5E5;
+    margin-top: 4%;
+}
+
+.progressTextActive{
+    color: #4D90CD;
+    margin-right: 10px;
+    margin-left: 10px;
+
+
+}
+
+.progressTextInactive{
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.progressLine{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
