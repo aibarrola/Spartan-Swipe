@@ -7,14 +7,17 @@ function createProfile2(){
  <div className="progressText">
                     <p className="progressTextInactive"> Personal Info</p>  <p className="progressTextActive"> Profile Picture </p>
                 </div>
-                <img className="progressLine" src={progressLine2} alt="progressLine" />
+                <img className="progressLine" src={progressLine2} alt="progressLine2" />
 
 
                 <form className="createProfileForm">
 
                     <div className="createProfileInputContainer">
                         <p className="inputLabel">Profile picture </p> 
-                        <input className="createProfileInput" placeholder="Computer Engineer" />
+                        <div className="submitPhotoSquare">
+                            <input type="file" class="custom-file-input" />
+
+                        </div>
 
 
                         <button className="createProfileButton"> Finish </button>

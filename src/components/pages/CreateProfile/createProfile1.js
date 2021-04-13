@@ -7,7 +7,7 @@ function createProfile1({handleSubmit}){
  <div className="progressText">
                     <p className="progressTextActive"> Personal Info</p>  <p className="progressTextInactive"> Profile Picture </p>
                 </div>
-                <img className="progressLine" src={progressLine1} alt="progressLine" />
+                <img className="progressLine" src={progressLine1} alt="progressLine1" />
 
 
                 <form className="createProfileForm" onSubmit={handleSubmit}>

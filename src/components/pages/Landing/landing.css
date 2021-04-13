@@ -32,3 +32,8 @@
     margin-left: 100px;
     text-align: center;
 }
+
+.createAccountBtn:hover{
+    background-color: #1760a5;
+
+}

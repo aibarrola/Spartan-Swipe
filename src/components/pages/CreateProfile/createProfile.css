@@ -83,8 +83,28 @@
     float: right;
     position: relative;
     right: -12px;
+    outline: none;
 }
 
+.createProfileButton:hover{
+    background-color: #5b9ad4
+}
+
+/* CREATERPROFILE 2 */
+
+.submitPhotoSquare{
+    border: 1px solid #C4C4C4;;
+    height: 300px;
+    border-radius: 5px;
+    color: #C4C4C4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploadPhotoInput{
+
+}
 
 /* PROGRESS BAR */
 
@@ -117,3 +137,29 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+
+/* INPUT FILE BUTTON */
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    content: 'Upload';
+    display: inline-block;
+    background: none;
+    border: 1px solid #C4C4C4;;
+    border-radius: 500px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 10pt;
+  }
+  .custom-file-input:hover::before {
+    border-color: #C4C4C4;;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }

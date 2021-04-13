@@ -84,3 +84,7 @@
     position: relative;
     right: -12px;
 }
+
+.registerButton:hover{
+    background-color: #5b9ad4;
+}
