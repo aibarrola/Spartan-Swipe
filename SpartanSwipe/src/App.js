@@ -1,15 +1,15 @@
 import './App.css';
-import Landing from '../src/components/pages/Landing/landing'
-import Login from './components/pages/Login/login'
-import Register from './components/pages/Register/register'
-import CreateProfile from './components/pages/CreateProfile/createProfile'
+import Landing from '../src/components/pages/Landing/landing';
+import Login from './components/pages/Login/login';
+import Register from './components/pages/Register/register';
+import CreateProfile from './components/pages/CreateProfile/createProfile';
+import Swipe from './components/pages/Swipe/Swipe';
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-
 function App() {
   return (
-    
+
       <Router>
         <Switch>
           <Route exact path="/">
@@ -28,6 +28,9 @@ function App() {
             <CreateProfile />
           </Route>
 
+          <Route exact path="/swipe">
+            <Swipe />
+          </Route>
 
         </Switch>
       </Router>
