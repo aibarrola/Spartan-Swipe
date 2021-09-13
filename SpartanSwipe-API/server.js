@@ -7,7 +7,7 @@ import Cards from './dbSwipeCards.js';
 // App Config
 const app = express();
 const port = process.env.PORT || 8001;
-const connection_url = 'mongodb+srv://admin:NSfH6WvtoNPjujXf@cluster0.ew7fq.mongodb.net/SpartanSwipeDatabase?retryWrites=true&w=majority';
+const connection_url = 'mongodb+srv://admin:g30Cj7hOKhj7Cne0@cluster0.ew7fq.mongodb.net/spartanswipedb?retryWrites=true&w=majority';
 
 // Middlewares
 app.use(express.json());
@@ -21,15 +21,15 @@ mongoose.connect(connection_url, {
 });
 
 // API Endpoints
-app.get('/', (req, res) => res.status(200).send('Hello World!'));
+app.get('/', (req, res) => res.send('Hello World! :)'));
 
-app.post('/SpartanSwipe/cards', (req, res) => {
+app.post('/spartanswipe/cards', (req, res) => {
     const dbSwipeCard = req.body;
 
-    Cards.create(dbSwipeCard, (err, data) => {
-        if (err) 
+    Cards.create(dbSwipeCard, (error, data) => {
+        if (error) 
         {
-            res.status(500).send(err);
+            res.status(500).send(error);
         }
         else
         {
@@ -38,15 +38,17 @@ app.post('/SpartanSwipe/cards', (req, res) => {
     });
 });
 
-app.get('/SpartanSwipe/cards', (req, res) => {
-    Cards.find((err, data) => {
-        if (err) 
+app.get('/spartanswipe/cards', (req, res) => {
+    Cards.find({}, (error, data) => {
+        if (error) 
         {
-            res.status(500).send(err);
+            res.status(500).send(error);
+            console.log(error);
         }
         else
         {
             res.send(data);
+            console.log(data);
         }
     });
 });
