@@ -44,9 +44,6 @@ function Landing(){
                             <h3>Study</h3>
                             <img style={{maxWidth: '80%', height: '200px'}} src={step3Image} />
                             <p>Connect with other students and chat with them</p>
-
-                            <p>lol</p>
-
                         </div>
                     </div>
                 </div>
