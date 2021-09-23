@@ -1,10 +1,14 @@
 {
+  "files.eol": "\r\n",
   "name": "backend",
   "version": "1.0.0",
   "description": "json package for backend",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,15 @@
   "bugs": {
     "url": "https://github.com/aibarrola/Spartan-Swipe/issues"
   },
-  "homepage": "https://github.com/aibarrola/Spartan-Swipe#readme"
+  "homepage": "https://github.com/aibarrola/Spartan-Swipe#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "mongoose": "^6.0.7"
+  }
 }
