@@ -14,4 +14,5 @@ Developer Dependencies (npm i -D ...)\
 nodemon: constantly refreshes server (almost making it live where we can see changes happen as we code)\
 concurrently: allows backend server to run with frontend react servers at the same time
 
-To run the server (After changing scripts: "start": "node server", "server": "nodemon server"): npm run server
+To run the server (After changing scripts: "start": "node server", "server": "nodemon server"): npm run server\
+The localhost PORT will be localhost:####, #### being whatever is set as the const PORT in server.js
