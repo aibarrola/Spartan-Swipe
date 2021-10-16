@@ -18,7 +18,7 @@ function Register(){
 
     function handleSubmit(e){
         e.preventDefault(); //prevents page from reloading upon submission
-        console.log("submitting")
+        console.log("handle submit function is called")
 
         //saves user information into user
         const user = {
@@ -31,6 +31,7 @@ function Register(){
 
         //I need to send to the backend using Axios when the backend is setup
     }
+
 
     function handleChange(e) {
         // Deconstruct e.target
@@ -55,7 +56,6 @@ function Register(){
               //no default
 
         }
-        console.log(firstName);
     }
 
     
