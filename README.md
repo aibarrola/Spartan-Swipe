@@ -16,3 +16,6 @@ concurrently: allows backend server to run with frontend react servers at the sa
 
 To run the server (After changing scripts: "start": "node server", "server": "nodemon server"): npm run server\
 The localhost PORT will be localhost:####, #### being whatever is set as the const PORT in server.js
+
+React Frontend
+npx create-react-app client: creates react on a folder called client
