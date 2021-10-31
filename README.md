@@ -17,17 +17,18 @@ concurrently: allows backend server to run with frontend react servers at the sa
 To run the server (After changing scripts: "start": "node server", "server": "nodemon server"): npm run server\
 The localhost PORT will be localhost:####, #### being whatever is set as the const PORT in server.js
 
-React Frontend\
+React Frontend (client)\
 npx create-react-app client: creates react on a folder called client\
 
-npm i ...
-axios: make HTTP requests (global headers)
-react-router-dom: router
-redux
-react-redux
-redux-thunk
-redux-devtools-extension
-moment: date and time library
-react-moment: able to utilize moment inside react
+npm i ...\
+axios: make HTTP requests (global headers)\
+react-router-dom: router\
+redux\
+react-redux\
+redux-thunk\
+redux-devtools-extension\
+moment: date and time library\
+react-moment: able to utilize moment inside react\
+uuid: node package that generates a random universal id 
 
 npm run dev: run both server (backend) with client (frontend)
