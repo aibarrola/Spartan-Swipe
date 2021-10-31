@@ -35,37 +35,6 @@ const ProfileSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     }
-    /*
-    experience: [
-        {
-            title: {
-                type: String,
-                required: true
-            },
-            company: {
-                type: String,
-                required: true
-            },
-            location: {
-                type: String
-            },
-            from: {
-                type: Date,
-                required: true
-            },
-            to: {
-                type: Date,
-            },
-            current: {
-                type: Boolean,
-                default: false
-            },
-            description: {
-                type: String
-            }
-        }
-    ],
-    */
 });
 
 module.exports = Profile = mongoose.model('profile', ProfileSchema);
