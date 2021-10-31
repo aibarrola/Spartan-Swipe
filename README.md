@@ -29,3 +29,5 @@ redux-thunk
 redux-devtools-extension
 moment: date and time library
 react-moment: able to utilize moment inside react
+
+npm run dev: run both server (backend) with client (frontend)
