@@ -1,9 +1,10 @@
 import React, { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { login } from '../../actions/auth';
 
-//import axios from 'axios';
-
-const Login = () => {
+const Login = ({ login, isAuthenticated }) => {
     // formData will be the state in the useState hook, setFormData is equivalent to something like this.setFormData etc.
     const [formData, setFormData] = useState({
         email: '',
@@ -17,32 +18,13 @@ const Login = () => {
 
     const onSubmit = async e => {
         e.preventDefault();
-        /*
-        const newUser = {
-            name,
-            email,
-            password
-        }
-        try
-        {
-            const config = {
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }
-            const body = JSON.stringify(newUser);
-            // axios returns a promise; it sends the name, email, and password to our proxy which sends it to 
-            // /api/users (not that we can send it to /api/users because of our proxy), adds it to the database, 
-            // and our backend returns a token
-            const res = await axios.post('/api/users', body, config);
-            console.log(res.data);
-        }
-        catch(error)
-        {
-            console.error(error.response.data);
-        }    
-        */
-        console.log('Success!');
+        login(email, password);
+    }
+
+    // Redirect if logged in
+    if(isAuthenticated)
+    {
+        return <Redirect to='/dashboard' />
     }
 
     return (
@@ -79,4 +61,13 @@ const Login = () => {
     )
 };
 
-export default Login;
+Login.propTypes = { 
+    login: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool
+};
+
+const mapStateToProps = state => ({ 
+    isAuthenticated: state.auth.isAuthenticated
+ });
+
+export default connect(mapStateToProps, { login })(Login);
