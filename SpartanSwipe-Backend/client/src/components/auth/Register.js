@@ -1,9 +1,12 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setAlert } from '../../actions/alert';
+import PropTypes from 'prop-types'
 
 //import axios from 'axios';
 
-const Register = () => {
+const Register = ({ setAlert }) => {
     // formData will be the state in the useState hook, setFormData is equivalent to something like this.setFormData etc.
     const [formData, setFormData] = useState({
         name: '',
@@ -21,7 +24,7 @@ const Register = () => {
         e.preventDefault();
         if(password !== confirmpassword)
         {
-            console.log('Passwords do not match!');
+            setAlert('Passwords do not match!', 'danger');
         }
         else
         {
@@ -111,4 +114,8 @@ const Register = () => {
     )
 };
 
-export default Register;
+Register.propTypes = {
+    setAlert: PropTypes.func.isRequired
+}
+
+export default connect(null, { setAlert })(Register);
