@@ -1,13 +1,13 @@
 # Spartan-Swipe
 
-Starting the appplication:
+Starting the appplication:\
 1.) Start up the terminal within the Spartan-Swipe folder\
 2.) cd into SpartanSwipe-Backend\
-2.1) The dependencies should all be in the package.jsons, but if they're not cd into SpartanSwipe-Backend and npm install the regular dependencies as well as the developer dependencies, afterwards cd into the client folder and install the regular dependencies for the front end
-3.) To run the application, type and enter: npm run dev\ 
+2.1) The dependencies should all be in the package.jsons, but if they're not cd into SpartanSwipe-Backend and npm install the regular dependencies as well as the developer dependencies, afterwards cd into the client folder and install the regular dependencies for the front end\
+3.) To run the application, type and enter: npm run dev\
 (npm run dev basically runs both server (backend) with client (frontend))
 
-Backend\
+Backend
 
 Regular Dependencies (npm i ...)\
 express: main framework for backend\
@@ -26,9 +26,9 @@ concurrently: allows backend server to run with frontend react servers at the sa
 To run the server (After changing scripts: "start": "node server", "server": "nodemon server"): npm run server\
 The localhost PORT will be localhost:####, #### being whatever is set as the const PORT in server.js
 
-React Frontend (client)\
+React Frontend (client)
 
-npx create-react-app client: creates react on a folder called client\
+npx create-react-app client: creates react on a folder called client
 
 Regular Dependencies (npm i ...)\
 axios: make HTTP requests (global headers)\
