@@ -3,9 +3,10 @@
 Starting the appplication:\
 1.) Start up the terminal within the Spartan-Swipe folder\
 2.) cd into SpartanSwipe-Backend\
-2.1) The dependencies should all be in the package.jsons, but if they're not, cd into SpartanSwipe-Backend and npm install the regular dependencies as well as the developer dependencies, afterwards cd into the client folder and install the regular dependencies for the front end\
-3.) To run the application, type and enter: npm run dev\
-(npm run dev basically runs both server (backend) with client (frontend))
+2.1) The dependencies should all be in the package.jsons, but if they're not, cd into SpartanSwipe-Backend and npm install the regular dependencies, afterwards cd into the client folder and install the regular dependencies for the front end\
+2.2) The developer dependencies probably won't be imported as I tested it myself, but to you can run and check. If not, enter: npm i -D concurrently\
+3.) To run the application, type and enter: npm run ss\
+(npm run ss basically runs both server (backend) with client (frontend) and ss is an acronym for spartanswipe that I made up)
 
 Backend
 

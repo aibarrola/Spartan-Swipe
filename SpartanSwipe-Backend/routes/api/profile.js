@@ -36,9 +36,8 @@ router.get('/me', auth, async (req, res) => {
 
 //middlewares = [auth, validation]
 router.post('/', [auth, [
-    check('major', 'Major is required').not().isEmpty(),
-    check('hobbies', 'Hobbies are required').not().isEmpty(),
-    check('skills', 'Skills are required').not().isEmpty(),
+    check('department', 'Department is required').not().isEmpty(),
+    check('degrees', 'Degrees are required').not().isEmpty(),
 ]], async (req, res) => {
     const errors = validationResult(req);
     if(!errors.isEmpty())
@@ -47,10 +46,9 @@ router.post('/', [auth, [
     }
 
     const {
-        major,
-        hobbies,
+        department,
         bio,
-        skills,
+        degrees,
         facebook,
         discord,
         linkedin
@@ -59,14 +57,13 @@ router.post('/', [auth, [
     // Build profile object
     const profileFields = {};
     profileFields.user = req.user.id;
-    if(major) profileFields.major = major;
-    if(hobbies) profileFields.hobbies = hobbies;
+    if(department) profileFields.department = department;
     if(bio) profileFields.bio = bio;
     
-    if(skills) {
-        // split the skills from a list to an array as well as mapping them and applying
+    if(degrees) {
+        // split the degrees from a list to an array as well as mapping them and applying
         // trimming which trim off spaces (regardless of how many spaces in between)
-        profileFields.skills = skills.split(',').map(skill => skill.trim());
+        profileFields.degrees = degrees.split(',').map(degree => degree.trim());
     }
  
     // Build social object
@@ -96,7 +93,7 @@ router.post('/', [auth, [
         res.status(500).send('Server Error');
     }
 
-    console.log(profileFields.skills);
+    console.log(profileFields.degrees);
 
     res.send('Hello');
 
