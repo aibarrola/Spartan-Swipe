@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import { getCurrentProfile } from '../../actions/profile';
+import DashboardActions from './DashboardActions';
 
 // [] at the end of a useEffect means it will only run once
 const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
@@ -18,7 +19,9 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
                 <i className='fas fa-user'/> Welcome {user && user.name}
             </p>
             {profile !== null ? (
-                <Fragment>has</Fragment> 
+                <Fragment>
+                    <DashboardActions />
+                </Fragment> 
             ) : (
                 <Fragment>
                     <p>Hmm, looks like you don't have a profile set up yet.</p>

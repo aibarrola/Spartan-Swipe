@@ -1,10 +1,10 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createProfile } from '../../actions/profile';
+import { createProfile, getCurrentProfile } from '../../actions/profile';
 
-const CreateProfile = ({ createProfile, history }) => {
+const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentProfile, history }) => {
     const [formData, setFormData] = useState({
         department: '',
         bio: '',
@@ -15,6 +15,24 @@ const CreateProfile = ({ createProfile, history }) => {
     });
 
     const [displaySocialInputs, toggleSocialInputs] = useState(false);
+    
+    // useEffect will keep reloading unless we put brackets at the end of the function. Also, the prop that will be depended
+    // on will be 'loading'. When the application loads, useEffect will run.
+    useEffect(() => {
+        getCurrentProfile();
+
+        setFormData({
+            // Check department part of form data if it's loading or if it doesn't have a department in the profile then
+            // have a blank field. If there is a department then fill it in the form data. The social links will be checked
+            // under social since they all branch from social
+            department: loading || !profile.department ? '' : profile.department,
+            bio: loading || !profile.bio ? '' : profile.bio,
+            degrees: loading || !profile.degrees ? '' : profile.degrees.join(','),
+            facebook: loading || !profile.social ? '' : profile.social.facebook,
+            discord: loading || !profile.social ? '' : profile.social.discord,
+            linkedin: loading || !profile.social ? '' : profile.social.linkedin,
+        });
+    }, [loading]);
 
     const {
         department,
@@ -29,7 +47,7 @@ const CreateProfile = ({ createProfile, history }) => {
 
     const onSubmit = e => {
         e.preventDefault();
-        createProfile(formData, history);
+        createProfile(formData, history, true);
     }
 
     return (
@@ -69,7 +87,7 @@ const CreateProfile = ({ createProfile, history }) => {
             <input type="text" placeholder="* Degree(s) & Concentration(s)" name="degrees" value={degrees} onChange={e => onChange(e)}/>
             <small className="form-text"
                 >Please use comma separated values (eg.
-                B: Biology, A: Chemistry, C: Microbiology)
+                B:Biology,A:Chemistry,C:Microbiology)
             </small>
             <small className="form-text">
                 <i>[A: Associates, B: Bachelor's, C: Concentration, D: Doctorate, M: Masters]</i>
@@ -111,9 +129,16 @@ const CreateProfile = ({ createProfile, history }) => {
     )
 }
 
-CreateProfile.propTypes = {
-    createProfile: PropTypes.func.isRequired
+EditProfile.propTypes = {
+    createProfile: PropTypes.func.isRequired,
+    getCurrentProfile: PropTypes.func.isRequired,
+    profile: PropTypes.object.isRequired
 };
+
+const mapStateToProps = state => ({
+    profile: state.profile
+});
+
 // Need to wrap CreateProfile with withRouter because if we don't, the function won't allow history object to be passed
 // and used from the action
-export default connect(null, { createProfile })(withRouter(CreateProfile));
+export default connect(mapStateToProps, { createProfile, getCurrentProfile })(withRouter(EditProfile));
