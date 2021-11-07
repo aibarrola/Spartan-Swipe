@@ -14,6 +14,9 @@ import CreateProfile from './components/profile-forms/CreateProfile';
 import PrivateRoute from './components/routing/PrivateRoute';
 import EditProfile from './components/profile-forms/EditProfile';
 import Profiles from './components/profiles/Profiles';
+import Profile from './components/profile/Profile';
+
+import Swipe from './components/swipe/Swipe';
 
 import './App.css';
 
@@ -38,7 +41,9 @@ const App = () => {
           <Switch>
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <PrivateRoute exact path="/swipe" component={Swipe} />
             <PrivateRoute exact path="/profiles" component={Profiles} />
+            <PrivateRoute exact path="/profile/:id" component={Profile} />
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             <PrivateRoute exact path="/create-profile" component={CreateProfile} />
             <PrivateRoute exact path="/edit-profile" component={EditProfile} />

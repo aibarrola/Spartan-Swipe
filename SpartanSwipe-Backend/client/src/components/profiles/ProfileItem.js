@@ -5,13 +5,14 @@ import PropTypes from 'prop-types';
 const ProfileItem = ({ profile: { user: {_id, name, avatar}, department, degrees } }) => {
     
     // Need to implement a way to direct message users
-    // Change Link to={`/profile/${_id}`} to go to user's direct messages
+    // Change <Link to={`/profile/${_id}`} className='btn btn-primary'>Message StudyBuddy</Link> to go to user's direct messages
     return (
         <div className='profile bg-light'>
             <img src={avatar} alt='' className='round-img'/>
             <div>
                 <h2>{name}</h2>
                 <p>{department} </p>
+                <Link to={`/profile/${_id}`} className='btn btn-primary'>View Profile</Link>
                 <Link to={`/profile/${_id}`} className='btn btn-primary'>Message StudyBuddy</Link>
             </div>
             <ul>
