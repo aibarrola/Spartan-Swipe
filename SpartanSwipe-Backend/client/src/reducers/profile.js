@@ -29,7 +29,7 @@ export default function(state = initialState, action) {
                 ...state,
                 profile: null,
                 loading: false
-            }
+            };
         default: 
             return state;
     }
