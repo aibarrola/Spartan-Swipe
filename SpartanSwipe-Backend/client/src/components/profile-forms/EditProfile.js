@@ -32,7 +32,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
             discord: loading || !profile.social ? '' : profile.social.discord,
             linkedin: loading || !profile.social ? '' : profile.social.linkedin,
         });
-    }, [loading]);
+    }, [loading, getCurrentProfile]);
 
     const {
         department,

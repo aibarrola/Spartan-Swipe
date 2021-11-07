@@ -15,6 +15,8 @@ export const getCurrentProfile = () => async dispatch => {
     }
     catch(error)
     {
+        dispatch({ type: CLEAR_PROFILE });
+        
         dispatch({ 
             type: PROFILE_ERROR,
             payload: { message: error.response.statusText, status: error.response.status }
@@ -25,7 +27,7 @@ export const getCurrentProfile = () => async dispatch => {
 // Get all profiles 
 // !!! (This may need to be changed in order to view only profiles that match)
 // Reducer change as well ^
-export const getProfile = () => async dispatch => {
+export const getProfiles = () => async dispatch => {
     dispatch({ type: CLEAR_PROFILE});
     try
     {
@@ -109,7 +111,7 @@ export const deleteAccount = () => async dispatch => {
     {
         try
         {
-            const res = await axios.delete('/api/profile');
+            await axios.delete('/api/profile');
     
             dispatch({
                 type: CLEAR_PROFILE
