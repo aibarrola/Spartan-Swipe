@@ -2,7 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const ProfileItem = ({ profile: { user: {_id, name, avatar}, department, degrees } }) => {
+const ProfileItem = ({ profile: { 
+    user: {_id, name, avatar}, 
+    department, 
+    degrees 
+} }) => {
     
     // Need to implement a way to direct message users
     // Change <Link to={`/profile/${_id}`} className='btn btn-primary'>Message StudyBuddy</Link> to go to user's direct messages
@@ -11,7 +15,7 @@ const ProfileItem = ({ profile: { user: {_id, name, avatar}, department, degrees
             <img src={avatar} alt='' className='round-img'/>
             <div>
                 <h2>{name}</h2>
-                <p>{department} </p>
+                <p>{department}</p>
                 <Link to={`/profile/${_id}`} className='btn btn-primary'>View Profile</Link>
                 <Link to={`/profile/${_id}`} className='btn btn-primary'>Message StudyBuddy</Link>
             </div>
