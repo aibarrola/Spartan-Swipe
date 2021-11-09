@@ -41,3 +41,5 @@ redux-devtools-extension\
 moment: date and time library\
 react-moment: able to utilize moment inside react\
 uuid: node package that generates a random universal id
+
+react-tinder-card: used for the frontend cards for their movement (swiping motion)

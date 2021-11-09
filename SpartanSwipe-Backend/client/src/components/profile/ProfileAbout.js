@@ -21,6 +21,9 @@ const ProfileAbout = ({
 )}
 
     <h2 class="text-primary">Degrees I'm working towards</h2>
+    <small className="form-text">
+    <i>[A: Associate, B: Bachelor's, C: Concentration, D: Doctorate, M: Master's]</i>
+    </small>
     <div class="degrees">
         {degrees.map((degree, index) => (
             <div key={index} className='p-1'>

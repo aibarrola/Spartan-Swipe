@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const ProfileItem = ({ profile: { 
-    user: {_id, name, avatar}, 
-    department, 
-    degrees 
+const ProfileItem = ({ 
+    profile: { 
+        user: { _id, name, avatar }, 
+        department, 
+        degrees 
 } }) => {
     
     // Need to implement a way to direct message users

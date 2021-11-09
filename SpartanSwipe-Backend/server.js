@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 8001;
 connectDB();
 
-// API Endpoints
+// API Endpoints, default res status is 200
 app.get('/', (req, res) => res.send('Hello World!'));
 
 //Middleware

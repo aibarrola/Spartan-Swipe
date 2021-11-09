@@ -19,7 +19,7 @@ export const getCurrentProfile = () => async dispatch => {
         
         dispatch({ 
             type: PROFILE_ERROR,
-            payload: { message: error.response.statusText, status: error.response.status }
+            payload: { msg: error.response.statusText, status: error.response.status }
          });
     }
 };

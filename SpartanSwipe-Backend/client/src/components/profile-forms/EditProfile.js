@@ -56,8 +56,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
             Create Your Profile
         </h1>
         <p className="lead">
-            <i className="fas fa-user"></i> Let's get some information to make your
-            profile stand out
+            <i className="fas fa-user"></i> Let's get some information to make your profile stand out
         </p>
         <small>* = required field</small>
         <form className="form" onSubmit={e => onSubmit(e)}>
@@ -90,7 +89,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
                 B:Biology,A:Chemistry,C:Microbiology)
             </small>
             <small className="form-text">
-                <i>[A: Associates, B: Bachelor's, C: Concentration, D: Doctorate, M: Masters]</i>
+                <i>[A: Associate, B: Bachelor's, C: Concentration, D: Doctorate, M: Master's]</i>
             </small>
             </div>
 
