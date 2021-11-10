@@ -15,6 +15,7 @@ import PrivateRoute from './components/routing/PrivateRoute';
 import EditProfile from './components/profile-forms/EditProfile';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
+import Messenger from './components/messenger/Messenger';
 
 import Swipe from './components/swipe/Swipe';
 
@@ -44,6 +45,7 @@ const App = () => {
             <PrivateRoute exact path="/swipe" component={Swipe} />
             <PrivateRoute exact path="/profiles" component={Profiles} />
             <PrivateRoute exact path="/profile/:id" component={Profile} />
+            <PrivateRoute exact path="/messenger/:id" component={Messenger} />
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             <PrivateRoute exact path="/create-profile" component={CreateProfile} />
             <PrivateRoute exact path="/edit-profile" component={EditProfile} />

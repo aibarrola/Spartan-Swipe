@@ -59,7 +59,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                     name="email" 
                     value={email} 
                     onChange={e => onChange(e)} 
-                    required />
+                    required 
+                />
+                <small className="form-text">
+                    Note: Your profile picture will be linked to your gravatar email
+                </small> 
                 </div>
                 <div className="form-group">
                 <input

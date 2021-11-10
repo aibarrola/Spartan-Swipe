@@ -23,9 +23,6 @@ const Card = ({
                 </ul>
             </h3>
         </div>
-        
-        
-
     )
 }
 

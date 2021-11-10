@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import TinderCard from 'react-tinder-card';
-import './Swipe.css';
+import '../../App.css';
 
 import Spinner from '../layout/Spinner';
 import Card from './Card';
