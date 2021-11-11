@@ -1,0 +1,23 @@
+.chatList {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.chatList:hover{
+    background-color: lightgray;
+}
+
+.chatListProfilePic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+}
+
+.chatListName {
+    font-weight: 500;
+}

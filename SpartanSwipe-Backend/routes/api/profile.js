@@ -146,7 +146,7 @@ router.get('/user/:user_id', async (req, res) => {
 // @desc    Delete profile, user, and posts (may change posts to messages)
 // @access  Private
 
-router.get('/', auth, async (req, res) => {
+router.delete('/', auth, async (req, res) => {
     try
     {   
         // Delete profile
