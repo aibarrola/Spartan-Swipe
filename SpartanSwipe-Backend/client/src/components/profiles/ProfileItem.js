@@ -17,7 +17,6 @@ const ProfileItem = ({
                 <h2>{name}</h2>
                 <p>{department}</p>
                 <Link to={`/profile/${_id}`} className='btn btn-primary'>View Profile</Link>
-                <Link to={`/messenger/${_id}`} className='btn btn-primary'>Message StudyBuddy</Link>
             </div>
             <ul>
                 {degrees.slice(0, 5).map((degree, index) => (
