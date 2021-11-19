@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const MessageSchema = new mongoose.Schema({ 
-    messageId: {
+    chatId: {
         type: String
     },
     sender: {
@@ -12,4 +12,4 @@ const MessageSchema = new mongoose.Schema({
     },
 }, {timestamps: true});
 
-module.exports = mongoose.model('message', MessageSchema);
+module.exports = Message = mongoose.model('message', MessageSchema);
