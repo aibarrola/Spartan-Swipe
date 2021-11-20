@@ -53,11 +53,23 @@ const Swipe = ({ getProfiles, profile: { profiles, loading } }) => {
     }, [getProfiles]);
 
     const swiped = (direction, nameToDelete) => {
-        console.log("receiving" + nameToDelete)
+        console.log("You swiped " + direction + " on " + nameToDelete)
+        if (direction == "right")
+        {
+            // put the current card into the user's database for a potential match
+            console.log("right")
+        }
+        if (direction == "left")
+        {
+            // due to time constraint: do nothing/skip
+            // if there's time: don't show card to user again
+            console.log("left")
+        }
+
     }
 
     const outOfFrame = (name) => {
-        console.log(name + "left the screen")
+        console.log(name + " left the screen")
     }
 
     return (
@@ -74,8 +86,8 @@ const Swipe = ({ getProfiles, profile: { profiles, loading } }) => {
                                     className='swipe' 
                                     key={profile.name} 
                                     preventSwipe={['up', 'down']} 
-                                    onSwipe={(dir) => swiped(dir, profile.name)} 
-                                    onCardLeftScreen={() => outOfFrame(profile.name)}
+                                    onSwipe={(dir) => swiped(dir, profile.user.name)} 
+                                    onCardLeftScreen={() => outOfFrame(profile.user.name)} 
                                 >
                                     <Card key={profile._id} profile={profile} />
                                 </TinderCard>
