@@ -31,8 +31,8 @@ const Login = ({ login, isAuthenticated }) => {
     return (
             <div className="login">
                 <div className="loginBox">       
-                        <h1 className="loginTitle">Login</h1>
-                        <p className="loginDesc"> Sign Into Your Account</p>
+                        <h1 className="loginTitle"> Welcome back!</h1>
+                        <p className="loginDesc"> Login to your account</p>
                        
                         <form className="loginForm" onSubmit={e => onSubmit(e)}>
 
