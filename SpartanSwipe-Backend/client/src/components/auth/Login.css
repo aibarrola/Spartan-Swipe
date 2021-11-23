@@ -1,0 +1,89 @@
+.login{
+    background-color: #E6EEF6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.loginBox{
+    background-color: white;
+    width: 500px;
+    align-self: center;
+    border-radius: 5px;
+    margin: auto auto;
+    padding: 2% 2%;
+    padding-bottom: 3%;
+}
+
+.loginTitle{
+    font-size: 1.3em;
+    color: #011111;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.loginDesc{
+    margin-top: 5px;
+    text-align: center;
+    font-size: .8rem;
+    color: #4F4F4F;
+    font-weight: 400;
+}
+
+.loginInputContainer{
+    justify-self: center;
+    align-self: center;
+    width: 80%;
+}
+
+.inputLabel{
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: .8em;
+    
+}
+
+.loginInput{
+    width: 100%;
+    border: 1px solid #C4C4C4;
+    color: black;
+    border-radius: 4px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.loginInput:focus{
+    border:1px solid #4D90CD;
+    outline: #4D90CD;
+}
+
+.loginInput::placeholder{
+    color: #C4C4C4;
+}
+
+.loginForm{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loginButton{
+    background-color: #4D90CD;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: none;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-top: 5%;
+    float: right;
+    position: relative;
+    right: -12px;
+}
+
+.loginButton:hover{
+    background-color: #5b9ad4;
+}

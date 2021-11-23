@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
+import './Login.css'
 
 const Login = ({ login, isAuthenticated }) => {
     // formData will be the state in the useState hook, setFormData is equivalent to something like this.setFormData etc.
@@ -28,36 +29,44 @@ const Login = ({ login, isAuthenticated }) => {
     }
 
     return (
-        <Fragment>
-            <h1 className="large text-primary">Sign In</h1>
-            <p className="lead"><i className="fas fa-user"></i> Sign Into Your Account</p>
-            <form className="form" onSubmit={e => onSubmit(e)}>
-                <div className="form-group">
-                <input 
-                    type="email" 
-                    placeholder="Email Address" 
-                    name="email" 
-                    value={email} 
-                    onChange={e => onChange(e)} 
-                    required />
-                </div>
-                <div className="form-group">
-                <input
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    minLength="6"
-                    value={password} 
-                    onChange={e => onChange(e)} 
+            <div className="login">
+                <div className="loginBox">       
+                        <h1 className="loginTitle">Login</h1>
+                        <p className="loginDesc"> Sign Into Your Account</p>
+                       
+                        <form className="loginForm" onSubmit={e => onSubmit(e)}>
+
+                            <div className="loginInputContainer">
+                                <p className="inputLabel"> Name </p>
+                                <input 
+                                    className="loginInput"
+                                    type="email" 
+                                    placeholder="Email Address" 
+                                    name="email" 
+                                    value={email} 
+                                    onChange={e => onChange(e)} 
+                                    required />
+
+                                <p className="inputLabel"> Password </p>
+                                <input
+                                    className="loginInput"
+                                    type="password"
+                                    placeholder="Password"
+                                    name="password"
+                                    minLength="6"
+                                    value={password} 
+                                    onChange={e => onChange(e)} 
+                                />
         
-                />
+                                <input type="submit" className="loginButton" value="Login" />
+                            </div>
+                        </form>
+
+                        <p className="loginDesc">
+                            Don't have an account? <Link to="/register">Sign Up</Link>
+                        </p>
                 </div>
-                <input type="submit" className="btn btn-primary" value="Login" />
-            </form>
-            <p className="my-1">
-                Don't have an account? <Link to="/register">Sign Up</Link>
-            </p>
-        </Fragment>
+            </div>
     )
 };
 
