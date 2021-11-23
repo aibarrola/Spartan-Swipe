@@ -332,7 +332,7 @@ button {
 }
 
 /* Landing Page */
-.landing {
+/* .landing {
   position: relative;
   background: url('./img/landing.jpg') no-repeat center center/cover;
   height: 100vh;
@@ -348,7 +348,7 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-}
+} */
 
 /* Profiles Page */
 .profile {
