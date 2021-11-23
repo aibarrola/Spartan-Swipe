@@ -2,7 +2,12 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import './Landing.css'
+import landingImage from './landingImage.svg';
+import step1Image from './step1Image.svg';
+import step2Image from './step2Image.svg';
+import step3Image from './step3Image.svg';
+import './Landing.css';
+
 
 const Landing = ({ isAuthenticated }) => {
     if(isAuthenticated)
@@ -19,6 +24,8 @@ const Landing = ({ isAuthenticated }) => {
                         className="createAccountBtn"> Create Account 
                     </Link>
                 </div>
+
+                <img className="heroImageResize" src={landingImage} />
 
             </div>
         </section>
