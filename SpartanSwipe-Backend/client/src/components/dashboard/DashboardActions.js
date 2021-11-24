@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Dashboard.css'
 
 export const DashboardActions = () => {
     return (
-        <div class="dash-buttons">
-        <Link to="/edit-profile" class="btn btn-light"
-          ><i class="fas fa-user-circle text-primary"></i> Edit Profile</Link>
+        <div class="dashBtn">
+        <Link to="/edit-profile" class="editProfileBtn"> Edit Profile</Link>
       </div>
     )
 }
