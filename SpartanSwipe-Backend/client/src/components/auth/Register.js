@@ -49,14 +49,17 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
                 <div className="registerInputContainer">
                     <p className="inputLabel">Name</p> 
-                    <input type="text" name="firstName" className="signUpInput" placeholder="Angelo" required value={name} onChange={e=>onSubmit(e)} />
+                    <input type="text" name="name" className="signUpInput" placeholder="Bob" required value={name} onChange={e=>onChange(e)} />
 
 
                     <p className="inputLabel">Email</p> 
-                    <input type="text" name="email" className="signUpInput" placeholder="angelo.ibarrola@sjsu.edu" required value={email} onChange={e=>onSubmit(e)} />
+                    <input type="email" name="email" className="signUpInput" placeholder="bob.ross@sjsu.edu" required value={email} onChange={e=>onChange(e)} />
 
                     <p className="inputLabel"> Password </p>
-                    <input type="password" name="password" className="signUpInput" placeholder="Enter Password" required value={password} onChange={e=>onSubmit(e)}  />
+                    <input type="password" name="password" className="signUpInput" placeholder="Enter Password" required value={password} onChange={e=>onChange(e)}  />
+
+                    <p className="inputLabel"> Confirm Password </p>
+                    <input type="password" name="confirmpassword" className="signUpInput" placeholder="Renter Password" required value={confirmpassword} onChange={e=>onChange(e)}  />
 
                     <input type="submit" className="registerButton" value="Register"  />
                 </div>
