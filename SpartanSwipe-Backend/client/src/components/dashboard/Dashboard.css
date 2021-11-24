@@ -1,0 +1,20 @@
+.centerDash{
+    display: flex;
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerBtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.setupBtn{
+    background-color: #4D90CD;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: none;
+}
