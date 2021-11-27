@@ -1,0 +1,70 @@
+.chatOnline {
+    background-color: pink;
+    min-height: 80%;
+    width: 45vh;
+    margin: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+/* .chatOnlineBuddy {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: red;
+} */
+
+/* .chatOnlineProfilePicContainer {
+    width: 45vh;
+    height: 45vh;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background-color: red;
+}
+
+.chatOnlineProfilePic {
+    overflow: hidden;
+    display: block;
+    min-width: 45vh;
+    min-height: 45vh;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+} */
+
+.chatOnlineProfilePic {
+    width: 45vh;
+    height: 55vh;
+    /* border-radius: 50%; */
+    object-fit: cover;
+    margin: auto;
+}
+
+.chatOnlineDetails {
+    background-color: #E6EEF6;
+    margin: -1.1vh auto auto auto;
+    width: 45vh;
+    height: 50vh;
+}
+
+.chatOnlineName {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+/* Used for green circle to indicate online status */
+.chatOnlineStatus {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: limegreen;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

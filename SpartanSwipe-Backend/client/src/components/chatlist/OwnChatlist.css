@@ -1,0 +1,26 @@
+.ownChatList {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.owncChatList:hover{
+    background-color: lightgray;
+}
+
+.ownChatListProfilePic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+    margin-left: 15px;
+
+}
+
+.ownChatListName {
+    font-weight: 500;
+}
