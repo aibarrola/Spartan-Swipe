@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { Fragment, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import Spinner from '../layout/Spinner';
+import ChatlistItems from './ChatlistItems';
+import { getProfiles } from '../../actions/profile';
 import './Chatlist.css';
 
 
-export default function Chatlist() {
+const Chatlist = ({ getProfiles, profile: { profiles, loading } }) => {
+    useEffect(() => {
+        getProfiles();
+    }, [getProfiles]);
+
     return (
         <div className='chatList'>
-            <img className='chatListProfilePic' src='https://as1.ftcdn.net/v2/jpg/01/17/42/38/500_F_117423860_bApe5ResfiVkO0G0UlUjUVNpAtFUWYYy.jpg' alt=''/>
-            <span className='chatListName'>Test</span>
-            
+                {profiles.length > 0 ? (
+                    profiles.map(profile => (
+                        <ChatlistItems key={profile._id} profile={profile} />
+                    ))
+                ) : <h4>No profiles found...</h4>}
         </div>
     )
 }
 
+Chatlist.propTypes = {
+    getChatlist: PropTypes.func.isRequired,
+    profile: PropTypes.object.isRequired
+};
 
+const mapStateToProps = state => ({
+    profile: state.profile
+});
+
+export default connect(mapStateToProps, { getProfiles })(Chatlist);

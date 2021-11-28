@@ -12,8 +12,6 @@ export default function Messenger()
                 <div className='chatlistWrapper'>
                     <input placeholder='Search for StudyBuddy' className='chatlistInput' />
                     <Chatlist/>
-                    <Chatlist/>
-                    <Chatlist/>
                 </div>
             </div>
             <div className='chatbox'>

@@ -3,7 +3,7 @@ const connectDB = require('./config/db')
 
 // App Config
 const app = express();
-const PORT = process.env.PORT || 8002;
+const PORT = process.env.PORT || 8005;
 connectDB();
 
 // API Endpoints, default res status is 200

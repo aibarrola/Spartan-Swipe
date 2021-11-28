@@ -17,7 +17,7 @@
     "react-tinder-card": "^1.4.5",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.4.0",
+    "redux-thunk": "^2.4.1",
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.2"
   },
@@ -45,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8002"
+  "proxy": "http://localhost:8005"
 }
