@@ -58,6 +58,8 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
                         <Chat msg={"what do you want to study?"}/>
                         <Chat own={true} msg={"lets study for the data structures exam next week?"}/>
                         <Chat msg={"let's do it"}/>
+                        <Chat own={true} msg={"when are you free"}/>
+
 
                     </div>
                     <div className='chatboxBottom'>

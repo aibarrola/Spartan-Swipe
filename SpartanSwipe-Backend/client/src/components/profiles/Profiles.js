@@ -16,7 +16,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
             { loading ? <Spinner /> : 
                 <Fragment> 
                     <h1 className="large title">Study Buddies</h1>
-                    <p className="lead">Here are your Study Buddies!</p>
+                    <p className="lead"> View the profiles of your study buddies!</p>
                     <div className="profiles">
                         {profiles.length > 0 ? (
                             profiles.map(profile => (

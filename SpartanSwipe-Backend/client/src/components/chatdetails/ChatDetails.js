@@ -15,7 +15,7 @@ export default function ChatDetails() {
                 </div>
             </div>
             <div className="chatOnlineDetails">
-                <p className='chatOnlineName'>Test User</p>
+                <p className='chatOnlineName'>Angelica Song</p>
                 <p className='chatOnlineDepartment'>Charles W. Davidson College of Engineering</p>
                 <ul className='chatOnlineDegrees'>
                     <li className=''>

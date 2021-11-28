@@ -7,7 +7,7 @@ import { getProfileById } from '../../actions/profile';
 export default function ChatboxName({own}) {
     return (
         <div className='chatboxName'>
-            <p>Test User</p>
+            <p>Angelica Song</p>
         </div>
     )
 }

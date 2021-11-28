@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import './Profiles.css'
 
 const ProfileItem = ({ 
     profile: { 
@@ -16,7 +17,7 @@ const ProfileItem = ({
             <div>
                 <h2>{name}</h2>
                 <p>{department}</p>
-                <Link to={`/profile/${_id}`} className='btn btn-primary'>View Profile</Link>
+                <Link to={`/profile/${_id}`} className='viewProfileBtn'>View Profile</Link>
             </div>
             <ul>
                 {degrees.slice(0, 5).map((degree, index) => (

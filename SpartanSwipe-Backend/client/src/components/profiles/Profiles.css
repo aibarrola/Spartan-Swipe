@@ -12,3 +12,11 @@
     margin-top: 20px;
     color: var(--primary-color);
 }
+
+.viewProfileBtn{
+    background-color: #4D90CD;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: none;
+}
