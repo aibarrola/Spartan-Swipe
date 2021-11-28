@@ -23,7 +23,6 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     
     const guestLinks = (
         <ul>
-            <li><a href='/#!'>About</a></li>
             <li><Link to='/login'>Login</Link></li>
         </ul>
     );

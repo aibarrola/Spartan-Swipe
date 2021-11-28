@@ -50,14 +50,14 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
                 <div className='chatboxWrapper'>
                     <ChatboxName />
                     <div className='chatboxTop'>
-                        <Chat />
-                        <Chat own={true}/>
-                        <Chat />
-                        <Chat />
-                        <Chat />
-                        <Chat />
-                        <Chat />
-                        <Chat />
+                        <Chat msg={"hello"}/>
+                        <Chat own={true} msg={"hi!"}/>
+                        <Chat msg={"hi!"}/>
+                        <Chat msg={"do you want to study"}/>
+                        <Chat own={true} msg={"yes im down"}/>
+                        <Chat msg={"what do you want to study?"}/>
+                        <Chat own={true} msg={"lets study for the data structures exam next week?"}/>
+                        <Chat msg={"let's do it"}/>
 
                     </div>
                     <div className='chatboxBottom'>
