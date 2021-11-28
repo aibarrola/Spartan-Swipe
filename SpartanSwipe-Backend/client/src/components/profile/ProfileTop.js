@@ -11,7 +11,7 @@ const ProfileTop = ({ profile: {
         <div class="profile-top bg-primary p-2">
           <img class="round-img my-1" src={avatar} alt=""/>
           <h1 class="large">{name}</h1>
-          <p class="lead">{department}</p>
+          <p class="department">{department}</p>
           <div class="icons my-1">
             {social && social.facebook && (
                 <a href={social.facebook} target="_blank" rel="noopener noreferrer">

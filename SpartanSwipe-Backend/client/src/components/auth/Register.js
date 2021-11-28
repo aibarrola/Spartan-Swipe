@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
+import './Register.css'
 
 //import axios from 'axios';
 
@@ -39,63 +40,37 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     }
 
     return (
-        <Fragment>
-            <h1 className="large text-primary">Sign Up</h1>
-            <p className="lead"><i className="fas fa-user"></i> Create Your Account</p>
-            <form className="form" onSubmit={e => onSubmit(e)}>
-                <div className="form-group">
-                <input 
-                    type="text" 
-                    placeholder="Name" 
-                    name="name" 
-                    value={name} 
-                    onChange={e => onChange(e)} 
-                    required />
+        <div className="register">
+        <div className="registerBox">
+            <h1 className="registerTitle"> Let's get started! </h1>
+            <h2 className="registerDesc"> Register with your school email </h2>
+
+            <form className="registerForm" onSubmit={e=>onSubmit(e)}>
+
+                <div className="registerInputContainer">
+                    <p className="inputLabel">Name</p> 
+                    <input type="text" name="name" className="signUpInput" placeholder="Bob" required value={name} onChange={e=>onChange(e)} />
+
+
+                    <p className="inputLabel">Email</p> 
+                    <input type="email" name="email" className="signUpInput" placeholder="bob.ross@sjsu.edu" required value={email} onChange={e=>onChange(e)} />
+
+                    <p className="inputLabel"> Password </p>
+                    <input type="password" name="password" className="signUpInput" placeholder="Enter Password" required value={password} onChange={e=>onChange(e)}  />
+
+                    <p className="inputLabel"> Confirm Password </p>
+                    <input type="password" name="confirmpassword" className="signUpInput" placeholder="Renter Password" required value={confirmpassword} onChange={e=>onChange(e)}  />
+
+                    <input type="submit" className="registerButton" value="Register"  />
                 </div>
-                <div className="form-group">
-                <input 
-                    type="email" 
-                    placeholder="Email Address" 
-                    name="email" 
-                    value={email} 
-                    onChange={e => onChange(e)} 
-                    required 
-                />
-                <small className="form-text">
-                    Note: Your profile picture will be linked to your gravatar email
-                </small> 
-                </div>
-                <div className="form-group">
-                <input
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    minLength="8"
-                    value={password} 
-                    onChange={e => onChange(e)} 
-        
-                />
-                <small className="form-text">
-                    Minimum password length: 8
-                </small>
-                </div>
-                <div className="form-group">
-                <input
-                    type="password"
-                    placeholder="Confirm Password"
-                    name="confirmpassword"
-                    minLength="8"
-                    value={confirmpassword} 
-                    onChange={e => onChange(e)} 
-                    
-                />
-                </div>
-                <input type="submit" className="btn btn-primary" value="Register" />
+
             </form>
-            <p className="my-1">
-                Already have an account? <Link to="/login">Sign In</Link>
+
+            <p className="loginDesc">
+                Already have an account? <Link to="/login">Log In</Link>
             </p>
-        </Fragment>
+        </div>
+    </div>
     )
 };
 

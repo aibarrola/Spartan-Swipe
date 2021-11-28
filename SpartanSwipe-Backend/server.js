@@ -13,10 +13,15 @@ app.get('/', (req, res) => res.send('Hello World!'));
 app.use(express.json({ extended: false }));
 
 //Routes
-app.use('/api/users', require('./routes/api/users'));
+// When the application goes to the urls /api/..., it's going to call the ./routes/api/... which will then look inside 
+// the routes
 app.use('/api/auth', require('./routes/api/auth'));
-app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/cards', require('./routes/api/cards'));
+app.use('/api/profile', require('./routes/api/profile'));
+app.use('/api/users', require('./routes/api/users'));
+
+app.use('/api/chat', require('./routes/api/chat'));
+app.use('/api/messages', require('./routes/api/messages'));
 
 // Listener
 app.listen(PORT, () => console.log(`listening on localhost: ${PORT}`));

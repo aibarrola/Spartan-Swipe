@@ -7,6 +7,7 @@ import Card from './Card';
 import { getProfiles } from '../../actions/profile';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import './Swipe.css'
 
 /* Hardcoded test
 const Swipe = () => {
@@ -53,18 +54,30 @@ const Swipe = ({ getProfiles, profile: { profiles, loading } }) => {
     }, [getProfiles]);
 
     const swiped = (direction, nameToDelete) => {
-        console.log("receiving" + nameToDelete)
+        console.log("You swiped " + direction + " on " + nameToDelete)
+        if (direction == "right")
+        {
+            // put the current card into the user's database for a potential match
+            console.log("right")
+        }
+        if (direction == "left")
+        {
+            // due to time constraint: do nothing/skip
+            // if there's time: don't show card to user again
+            console.log("left")
+        }
+
     }
 
     const outOfFrame = (name) => {
-        console.log(name + "left the screen")
+        console.log(name + " left the screen")
     }
 
     return (
         <Fragment>
             { loading ? <Spinner /> : <Fragment> 
                 <p className="lead">
-                    <i className="header"></i> Swipe Left: Sorry, Buddy. ||| Swipe Right: Let's Study Buddy!
+                    <i className="header"></i> Swipe right to match! Swipe left to skip.
                 </p>
                 <div className="swipeCards">
                     <div className='tinderCard__container'>
@@ -74,8 +87,8 @@ const Swipe = ({ getProfiles, profile: { profiles, loading } }) => {
                                     className='swipe' 
                                     key={profile.name} 
                                     preventSwipe={['up', 'down']} 
-                                    onSwipe={(dir) => swiped(dir, profile.name)} 
-                                    onCardLeftScreen={() => outOfFrame(profile.name)}
+                                    onSwipe={(dir) => swiped(dir, profile.user.name)} 
+                                    onCardLeftScreen={() => outOfFrame(profile.user.name)} 
                                 >
                                     <Card key={profile._id} profile={profile} />
                                 </TinderCard>

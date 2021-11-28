@@ -13,7 +13,7 @@ const Chatlist = ({
 } }) => {
 
     return (
-        <Link to={`/messenger/${_id}`} className=''>
+        // <Link to={`/messenger/${_id}`} className=''>
             <div className='chatList'>
                 <img className='chatListProfilePic' src={avatar} alt=''/>
                 <div>
@@ -21,7 +21,7 @@ const Chatlist = ({
                     <p className='chatListMessagePreview'>Message</p>
                 </div>
             </div>
-        </Link>
+        // </Link> 
     )
 }
 

@@ -20,10 +20,10 @@
 }
 
 .chatListName {
-    font-weight: 500;
+    color: black;
 }
 
 .chatListMessagePreview {
-    font-weight: 500;
     font-size: 14px;
+    color: black
 }

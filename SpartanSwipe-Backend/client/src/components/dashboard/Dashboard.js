@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import { deleteAccount, getCurrentProfile } from '../../actions/profile';
 import DashboardActions from './DashboardActions';
+import './Dashboard.css'
 
 // [] at the end of a useEffect means it will only run once
 const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: { profile, loading } }) => {
@@ -14,25 +15,28 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
     
     return ( 
         <Fragment>
-            <h1 className='large text-primary'>Dashboard</h1>
-            <p className='lead'>
-                <i className='fas fa-user'/> Welcome {user && user.name}
-            </p>
+            {/* <h1 className='large text-primary'>Dashboard</h1> */}
+
+            <div className="centerDash">
+                <h1> Welcome {user && user.name} </h1>
+            </div>
             {profile !== null ? (
                 <Fragment>
                     <DashboardActions />
 
-                    <div className="my-2">
-                        <button className="btn btn-danger" onClick={() => deleteAccount()}>
-                            <i className="fas fa-user-minus"></i> Delete My Account
+                    <div className="dashBtn">
+                        <button className="deleteBtn" onClick={() => deleteAccount()}>
+                            Delete my account
                         </button>
                     </div>
                 </Fragment> 
             ) : (
                 <Fragment>
-                    <p>Hmm, looks like you don't have a profile set up yet.</p>
-                    <Link to ='/create-profile' className='btn btn-primary my-1'>Let's get your profile set up!</Link>
+                    <div className="centerBtn">
+                        <Link to ='/create-profile' className='setupBtn'>Set up profile!</Link>
+                    </div>
                 </Fragment>
+                
             )}
         </Fragment>
     );

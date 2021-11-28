@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import ProfileItem from './ProfileItem';
 import { getProfiles } from '../../actions/profile';
+import './Profiles.css';
 
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
     useEffect(() => {
@@ -12,18 +13,17 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
 
     return (
         <Fragment>
-            { loading ? <Spinner /> : <Fragment> 
-                <h1 className="large text-primary">StudyBuddies</h1>
-                <p className="lead">
-                    <i className="fab fa-connectdevelop"></i> Here are your StudyBuddies
-                </p>
-                <div className="profiles">
-                    {profiles.length > 0 ? (
-                        profiles.map(profile => (
-                            <ProfileItem key={profile._id} profile={profile} />
-                        ))
-                    ) : <h4>No profiles found...</h4>}
-                </div>
+            { loading ? <Spinner /> : 
+                <Fragment> 
+                    <h1 className="large title">Study Buddies</h1>
+                    <p className="lead">Here are your Study Buddies!</p>
+                    <div className="profiles">
+                        {profiles.length > 0 ? (
+                            profiles.map(profile => (
+                                <ProfileItem key={profile._id} profile={profile} />
+                            ))
+                        ) : <h4>No profiles found...</h4>}
+                    </div>
                 </Fragment> }
         </Fragment>
     );

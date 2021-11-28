@@ -33,9 +33,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
                     <div className="profiles">
                         {profiles.length > 0 ? (
                             profiles.map(profile => (
-                                <Link to={`/messenger/${profile._id}`} className=''>
                                     <Chatlist key={profile._id} profile={profile} />
-                                </Link>
                             ))
                         ) : <h4>No profiles found...</h4>}
                     </div>
@@ -50,11 +48,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
             </div>
             <div className='chatbox'>
                 <div className='chatboxWrapper'>
-                    {profiles.length > 0 ? (
-                        profiles.map(profile => (
-                            <ChatboxName key={profile._id} profile={profile} />
-                        ))
-                    ) : <h4>No profiles found...</h4>}
+                    <ChatboxName />
                     <div className='chatboxTop'>
                         <Chat />
                         <Chat own={true}/>
@@ -74,11 +68,11 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
             </div>
             <div className='chatDetails'>
                 <div className='chatDetailsWrapper'>
-                    {profiles.length > 0 ? (
-                        profiles.map(profile => (
-                            <ChatDetails key={profile._id} profile={profile} />
-                        ))
-                    ) : <h4>No profiles found...</h4>}
+                    {/* {profiles.length > 0 ? (
+                        profiles.map(profile => ( */}
+                            <ChatDetails />
+                    {/*     ))
+                    ) : <h4>No profiles found...</h4>} */}
                 </div>
             </div>
         </div>

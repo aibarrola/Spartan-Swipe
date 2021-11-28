@@ -24,7 +24,7 @@
 .chatMessage {
     padding: 10px;
     border-radius: 25px;
-    background-color: rgb(0, 82, 152);
+    background-color: #4D90CD;
     color: white;
     max-width: 300;
 }
@@ -34,7 +34,7 @@
 }
 
 .chat.own .chatMessage {
-    background-color: rgb(253, 191, 92);
+    background-color: #ffda5e;
     color: black;
 }
 

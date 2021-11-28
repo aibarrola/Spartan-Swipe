@@ -1,0 +1,121 @@
+.createProfile{
+    background-color: #E6EEF6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.createProfileBox{
+    background-color: white;
+    width: 500px;
+    align-self: center;
+    border-radius: 5px;
+    margin: auto auto;
+    padding: 2% 2%;
+    padding-bottom: 3%;
+}
+
+.createProfileTitle{
+    font-size: 1.3em;
+    color: #011111;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.createProfileDesc{
+    margin-top: 5px;
+    text-align: center;
+    font-size: .8rem;
+    color: #4F4F4F;
+    font-weight: 400;
+}
+
+.createProfileInputContainer{
+    justify-self: center;
+    align-self: center;
+    width: 80%;
+}
+
+.inputLabel{
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: .8em;
+    
+}
+
+.createProfileInput{
+    width: 100%;
+    border: 1px solid #C4C4C4;
+    color: black;
+    border-radius: 4px;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-family: 'Roboto', 'Raleway';
+    resize: none;
+}
+
+select{
+    width: 100%;
+    border: 1px solid #C4C4C4;
+    color: black;
+    border-radius: 4px;
+    height: 30px;
+}
+
+.createProfileInput:focus{
+    border:1px solid #4D90CD;
+    outline: #4D90CD;
+}
+
+.createProfileInput::placeholder{
+    color: #C4C4C4;
+}
+
+.createProfileForm{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.createProfileButton{
+    background-color: #4D90CD;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: none;
+    justify-self: center;
+    align-self: center;
+    margin-top: 5%;
+    float: center;
+    position: relative;
+}
+
+.createProfileButton:hover{
+    background-color: #5b9ad4;
+}
+
+.social-networks {
+    background: var(--light-color);
+    color: #333;
+    display: inline-block;
+    background: var(--light-color);
+    color: #333;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-left: 4.5rem;
+    margin-top: 2rem;
+    transition: opacity 0.2s ease-in;
+    outline: none;
+}
+
+.social-networks-container {
+    margin: auto;
+}
+

@@ -1,0 +1,90 @@
+.register{
+    background-color: #E6EEF6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.registerBox{
+    background-color: white;
+    width: 500px;
+    align-self: center;
+    border-radius: 5px;
+    margin: auto auto;
+    padding: 2% 2%;
+    padding-bottom: 3%;
+}
+
+.registerTitle{
+    font-size: 1.3em;
+    color: #011111;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.registerDesc{
+    margin-top: 5px;
+    text-align: center;
+    font-size: .8rem;
+    color: #4F4F4F;
+    font-weight: 400;
+}
+
+.registerInputContainer{
+    justify-self: center;
+    align-self: center;
+    width: 80%;
+}
+
+.inputLabel{
+    margin-bottom: 3px;
+    margin-top: 7px;
+    font-weight: 600;
+    font-size: .8em;
+    
+}
+
+.signUpInput{
+    width: 100%;
+    border: 1px solid #C4C4C4;
+    color: black;
+    border-radius: 4px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.signUpInput:focus{
+    border:1px solid #4D90CD;
+    outline: #4D90CD;
+}
+
+.signUpInput::placeholder{
+    color: #C4C4C4;
+}
+
+.registerForm{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.registerButton{
+    background-color: #4D90CD;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: none;
+    justify-self: center;
+    align-self: center;
+    margin-top: 5%;
+    margin-left: 8rem;
+    float: center;
+    position: relative;
+}
+
+.registerButton:hover{
+    background-color: #5b9ad4;
+}

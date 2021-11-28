@@ -5,7 +5,7 @@ import { getProfileById } from '../../actions/profile';
 import { Link } from 'react-router-dom';
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
-
+import './Profile.css'
 
 const Profile = ({ 
     getProfileById, 
@@ -27,9 +27,11 @@ const Profile = ({
     return profile ? (
         <Fragment>
             <Link to='/profiles' className='btn btn-light'>Back to StudyBuddies</Link>
-            <div class="profile-grid my-1">
-                <ProfileTop profile={profile} />
-                <ProfileAbout profile={profile} />
+            <div className='profile-container'>
+                <div class="profile-grid my-1">
+                    <ProfileTop profile={profile} />
+                    <ProfileAbout profile={profile} />
+                </div>
             </div>
         </Fragment>
     ) : null;

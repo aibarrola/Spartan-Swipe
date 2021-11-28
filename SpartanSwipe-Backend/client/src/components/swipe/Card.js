@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Card.css';
 
 const Card = ({ 
     profile: { 
@@ -9,18 +10,23 @@ const Card = ({
 } }) => {
 
     return (
-        <div style={{ backgroundImage: `url(${avatar})`}} className='card'>
-            <h3>
-                {name}
-                <h1>{department}</h1>
-                <ul>
-                    {degrees.slice(0, 5).map((degree, index) => (
-                        <li key={index} className='text-primary'>
-                            <i className='fas fa-check' /> {degree}
-                        </li>
-                    ))}
-                </ul>
-            </h3>
+        <div className='card-container'>
+            <div className='card-image-container'>
+                <img class='card-image' src={avatar} alt=''/>
+            </div>
+            <div className='card-info'>
+                <div className='card-info-items'>
+                    <p className='card-name'>{name}</p>
+                    <p className='card-department'>{department}</p>
+                    <ul className='card-degrees'>
+                        {degrees.slice(0, 5).map((degree, index) => (
+                            <li key={index} className=''>
+                                <i className='fas fa-check' aria-hidden='true'/> {degree}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
         </div>
     )
 }

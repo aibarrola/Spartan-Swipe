@@ -45,7 +45,7 @@ const App = () => {
             <PrivateRoute exact path="/swipe" component={Swipe} />
             <PrivateRoute exact path="/profiles" component={Profiles} />
             <PrivateRoute exact path="/profile/:id" component={Profile} />
-            <PrivateRoute exact path="/messenger/:id" component={Messenger} />
+            <PrivateRoute exact path="/messenger" component={Messenger} />
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             <PrivateRoute exact path="/create-profile" component={CreateProfile} />
             <PrivateRoute exact path="/edit-profile" component={EditProfile} />

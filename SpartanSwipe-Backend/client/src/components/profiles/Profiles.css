@@ -1,0 +1,14 @@
+.profiles, .title, .lead {
+    max-width: 50rem;
+    margin: auto;
+}
+
+.title, .lead {
+    max-width: 50rem;
+    text-align: center;
+}
+
+.title {
+    margin-top: 20px;
+    color: var(--primary-color);
+}

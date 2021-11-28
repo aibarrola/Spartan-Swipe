@@ -24,7 +24,7 @@ const ProfileAbout = ({
     <small className="form-text">
     <i>[A: Associate, B: Bachelor's, C: Concentration, D: Doctorate, M: Master's]</i>
     </small>
-    <div class="degrees">
+    <div class="majors">
         {degrees.map((degree, index) => (
             <div key={index} className='p-1'>
                 <i className='fas fa-check' /> {degree}

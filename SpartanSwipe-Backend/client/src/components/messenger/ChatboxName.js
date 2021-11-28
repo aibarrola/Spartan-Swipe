@@ -4,24 +4,32 @@ import { connect } from 'react-redux';
 import './ChatboxName.css';
 import { getProfileById } from '../../actions/profile';
 
-var url = window.location.pathname;
-var id = url.substring(url.lastIndexOf('/') + 1);
-console.log(id);
-
-const ChatboxName = ({ 
-    profile: { 
-        user: { _id, name, avatar }, 
-        department, 
-        degrees 
-} }) => {
- 
-    
+export default function ChatboxName({own}) {
     return (
         <div className='chatboxName'>
-            <p>{_id === id ? name : null}</p>
+            <p>Test User</p>
         </div>
     )
- }
+}
+
+// var url = window.location.pathname;
+// var id = url.substring(url.lastIndexOf('/') + 1);
+// console.log(id);
+
+// const ChatboxName = ({ 
+//     profile: { 
+//         user: { _id, name, avatar }, 
+//         department, 
+//         degrees 
+// } }) => {
+ 
+    
+//     return (
+//         <div className='chatboxName'>
+//             <p>{_id === id ? name : null}</p>
+//         </div>
+//     )
+//  }
 
 //  ChatDetails.propTypes = {
 //     getProfileById: PropTypes.func.isRequired,
@@ -35,4 +43,4 @@ const ChatboxName = ({
 // });
 
 // export default connect(mapStateToProps, { getProfileById })(ChatDetails);
-export default ChatboxName;
+// export default ChatboxName;
