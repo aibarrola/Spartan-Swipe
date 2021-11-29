@@ -1,5 +1,7 @@
 # Spartan-Swipe
 
+Github Repository: https://github.com/aibarrola/Spartan-Swipe
+
 Starting the appplication:\
 1.) Start up the terminal within the Spartan-Swipe folder\
 2.) cd into SpartanSwipe-Backend\
