@@ -3,11 +3,18 @@
 Starting the appplication:\
 1.) Start up the terminal within the Spartan-Swipe folder\
 2.) cd into SpartanSwipe-Backend\
-2.1) The dependencies should all be in the package.jsons, but if they're not, cd into SpartanSwipe-Backend and npm install the regular dependencies, afterwards cd into the client folder and install the regular dependencies for the front end\
-2.2) The developer dependencies probably won't be imported as I tested it myself, but to you can run and check. If not, enter: npm i -D concurrently (while you are in SpartanSwipe-Backend)\
-2.3) /config/default.json is using my mongodb, not sure if it matters but you can make your own db/collections and edit the config as such\
-3.) To run the application, type and enter (while you are in SpartanSwipe-Backend): npm run ss\
-(npm run ss basically runs both server (backend) with client (frontend) and ss is an acronym for spartanswipe that I made up)
+2.1) The dependencies should all be in the package.jsons, but if they're not, cd into SpartanSwipe-Backend and npm install the regular dependencies and developer dependencies (copy and paste these commands into the terminal)/
+
+npm i express express-validator bcryptjs config gravatar jsonwebtoken mongoose request
+
+npm i -D nodemon concurrently
+
+2.2) Afterwards cd into the client folder and install the regular dependencies for the front end\
+
+npm i axios react-router-dom redux react-redux redux-thunk redux-devtools-extension moment react-moment uuid react-tinder-card
+
+3.) To run the application, cd back into the SpartanSwipe-Backend folder and type and enter: npm run ss\
+(npm run ss basically runs both server (backend) with client (frontend) and ss is an acronym for spartanswipe)
 
 Backend
 
