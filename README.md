@@ -1,4 +1,4 @@
-# Spartan-Swipe
+# Spartan Swipe
 
 Github Repository: https://github.com/aibarrola/Spartan-Swipe
 
